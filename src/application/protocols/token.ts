@@ -9,10 +9,10 @@ export interface TokenSignResult {
   token: string;
 }
 
-export interface ITokenSign {
+export interface TokenSign {
   sign(options: TokenPayload): Promise<TokenSignResult>;
 }
 
-export interface ITokenVerify {
+export interface TokenVerify {
   verify(token: string): Promise<TokenPayload>;
 }

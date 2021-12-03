@@ -1,13 +1,13 @@
 import {
-  ITokenSign,
-  ITokenVerify,
+  TokenSign,
+  TokenVerify,
   TokenPayload,
   TokenSignResult,
 } from '../../application/protocols';
 
 import {sign, verify} from 'jsonwebtoken';
 
-export class JWTAdapter implements ITokenSign, ITokenVerify {
+export class JWTAdapter implements TokenSign, TokenVerify {
   private secret: string;
 
   public constructor(secret: string) {
